@@ -4,13 +4,13 @@
 
 !SLIDE
 # Examples
-    @@@ makefile
+    @@@ conf
     ; Simple install
     projects[] = views
 
 !SLIDE
 # Examples
-    @@@ makefile
+    @@@ conf
     ; Specific versions
     projects[views][version] = 3.0
 
