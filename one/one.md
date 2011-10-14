@@ -38,6 +38,11 @@ Site manifest
 Easy for developers to quickly get up to speed on a project
 
 !SLIDE
+Can eliminate duplicative repositories
+
+(Doesn't have to)
+
+!SLIDE
 Encourages contributing back to the community
 
 (Which encourages well thought out patches instead of hacks)
@@ -130,18 +135,23 @@ Sample development setup
 # Things that could be better
 * `drush pm-update`
 * External dependencies
+* Drupal.org distribution packaging
 
 !SLIDE bullets incremental small
 # The future of make
 * `drush pm-update` needs an option to update the .make file
 * Caching of downloads (currently, use squid)
 * Drush 5 does this
-* Better support
 * create a Drush Deploy strategy
 
 !SLIDE bullets incremental
 # The future of make
-* which means ...
+* Patch manifest
+* Better support
+
+!SLIDE bullets incremental
+# The future of make
+* and finally ...
 * ### Put make in drush core
 * http://drupal.org/node/1310130
 
