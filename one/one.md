@@ -1,6 +1,6 @@
 !SLIDE
 # Drush Make
-## The theory, the practice, the future
+The theory, the practice, the future
 
 !SLIDE
 # About me
@@ -13,7 +13,7 @@
 Some quick examples
 
 !SLIDE subsection
-# Basic examples
+Core + Views
     @@@ conf
     ; Core, latest version
 	projects[] = drupal
@@ -22,21 +22,20 @@ Some quick examples
     projects[] = views
 
 !SLIDE subsection
-# Basic examples
+Specific versions
     @@@ conf
-    ; Specific versions
     projects[views][version] = 3.0
 
 !SLIDE
 # Why
+
+!SLIDE
 Site manifest
 
 !SLIDE
-# WHY
 Easy for developers to quickly get up to speed on a project
 
 !SLIDE
-# WHY
 Encourages contributing back to the community
 
 (Which encourages well thought out patches instead of hacks)
@@ -44,23 +43,46 @@ Encourages contributing back to the community
 !SLIDE
 # Advanced usage
 
-!SLIDE subsection
-# Advanced usage
+!SLIDE subsection small
+Patches
     @@@ conf
-    ; Patches
-    TODO
+    projects[spaces][subdir] = "contrib"
+    projects[spaces][version] = "3.1"
+    ; Patch spaces: http://drupal.org/node/976324#comment-4354134
+    projects[spaces][patch][] = "http://drupal.org/files/issues/spaces.976324-08.patch"
+    ; Patch spaces: http://drupal.org/node/1232804#comment-4794526
+    projects[spaces][patch][] = "http://drupal.org/files/issues/1232804-spaces_og_group_node_403.patch"
 
-!SLIDE subsection
-# Advanced usage
+!SLIDE subsection small
+Customizing Distributions
     @@@ conf
-	; Customizing distributions
-	TODO
+	; OpenAtrium
+    projects[openatrium][type] = "profile"
+    projects[openatrium][download][type] = "git"
+    projects[openatrium][download][tag] = "6.x-1.0"
+    
+    ; Additional modules
+    projects[editablefields][subdir] = "contrib"
+    projects[editablefields][version] = "2.0"
 
-!SLIDE subsection
+!SLIDE subsection small
+Atrium with Pressflow
+    @@@ conf
+	; Pressflow
+    projects[pressflow][type] = "core"
+    projects[pressflow][download][type] = "file"
+    projects[pressflow][download][url] = "http://launchpad.net/pressflow/6.x/6.22.104/+download/pressflow-6.22.104.tar.gz"
+
+	; OpenAtrium
+    projects[openatrium][type] = "profile"
+    projects[openatrium][download][type] = "git"
+    projects[openatrium][download][tag] = "6.x-1.0"
+
+!SLIDE subsection small
 # Advanced usage
     @@@ bash
     # working copy
-    TODO
+	drush make --working-copy foo.make
 
 !SLIDE subsection small
 # Advanced usage
