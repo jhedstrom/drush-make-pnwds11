@@ -105,13 +105,14 @@ External libraries
     libraries[jquery_ui][download][type] = "get"
     libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery.ui-1.6.zip"
     libraries[jquery_ui][directory_name] = "jquery.ui"
-    libraries[jquery_ui][destination] = "modules/jquery_ui"
+    libraries[jquery_ui][destination] = "modules/contrib/jquery_ui"
 
 !SLIDE smaller
 Sample development setup
     @@@ sh
     project/
     |- app/
+       |
        |- my_project/
        |  |  my_project.make
        |  |  my_project.info
@@ -119,6 +120,7 @@ Sample development setup
        |  |- modules/
        |     |- custom/
        |     |- features/
+       |
        |- docroot/
 	      |- profiles/
 		     |- standard/
