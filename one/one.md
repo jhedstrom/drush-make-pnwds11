@@ -155,9 +155,10 @@ Sample development setup
 * ### Put make in drush core
 * http://drupal.org/node/1310130
 
-!SLIDE bullets
+!SLIDE bullets small
 # Thank you
 * node #1310130
 * Presentation made with Showoff
+* (and available at jhedstrom.github.com)
 * ###Questions?
 ![cc](cc.png)
