@@ -125,20 +125,19 @@ Sample development setup
 * <s>Acquia</s> (no)
 * <s>Pantheon</s> (no)
 * Aegir (yes)
-* Solution?
-* Drush Deploy strategy.
 
 !SLIDE subsection bullets incremental
 # Things that could be better
 * `drush pm-update`
 * External dependencies
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental small
 # The future of make
 * `drush pm-update` needs an option to update the .make file
 * Caching of downloads (currently, use squid)
 * Drush 5 does this
 * Better support
+* create a Drush Deploy strategy
 
 !SLIDE bullets incremental
 # The future of make
@@ -146,8 +145,9 @@ Sample development setup
 * ### Put make in drush core
 * http://drupal.org/node/1310130
 
-!SLIDE bullets incremental
+!SLIDE bullets
 # Thank you
 * node #1310130
 * Presentation made with Showoff
 * ###Questions?
+![cc](cc.png)
