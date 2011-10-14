@@ -70,8 +70,22 @@ TODO
 
 !SLIDE subsection bullets incremental
 # Things that could be better
- * `drush pm-update`
- * External dependencies
+* `drush pm-update`
+* External dependencies
 
 !SLIDE bullets incremental
 # The future of make
+* `drush pm-update` needs an option to update the .make file
+* Caching of downloads (currently, use squid)
+* Drush 5 does this
+* Better support
+
+!SLIDE bullets incremental
+# The future of make
+* which means ...
+* # Put make in drush core
+* TODO issue number
+
+!SLIDE
+# Thank you
+* TODO issue number (drush in core)
