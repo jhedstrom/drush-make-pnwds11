@@ -2,11 +2,13 @@
 # Drush Make
 The theory, the practice, the future
 
-!SLIDE
+!SLIDE center bullets
 # About me
 * Jonathan Hedstrom
 * [@jhedstro](http://twitter.com/jhedstro)
 * [jhedstrom](http://drupal.org/user/208732)
+
+![cc](cc.png)
 
 !SLIDE
 # Drush Make
@@ -78,20 +80,19 @@ Atrium with Pressflow
     projects[openatrium][download][type] = "git"
     projects[openatrium][download][tag] = "6.x-1.0"
 
-!SLIDE subsection small
-# Advanced usage
-    @@@ bash
-    # working copy
+!SLIDE subsection
+Working copy
+    @@@ sh
 	drush make --working-copy foo.make
 
 !SLIDE subsection small
-# Advanced usage
+External libraries
     @@@ conf
-    ; External libraries
+    ; Solr library
     libraries[SolrPHPClient][download][type] = "svn"
     libraries[SolrPHPClient][download][url] = "http://solr-php-client.googlecode.com/svn/trunk/"
     libraries[SolrPHPClient][download][revision] = "22"
-    libraries[SolrPHPClient][destination] = "modules/apachesolr/"
+    libraries[SolrPHPClient][destination] = "modules/contrib/apachesolr/"
     libraries[SolrPHPClient][directory_name] = "SolrPhpClient"
 
     ; jQuery UI
@@ -101,9 +102,22 @@ Atrium with Pressflow
     libraries[jquery_ui][directory_name] = "jquery.ui"
     libraries[jquery_ui][destination] = "modules/jquery_ui"
 
-!SLIDE
-# Sample development workflow
-TODO
+!SLIDE smaller
+Sample development setup
+    @@@ sh
+    project/
+    |- app/
+       |- my_project/
+       |  |  my_project.make
+       |  |  my_project.info
+       |  |  my_project.install
+       |  |- modules/
+       |     |- custom/
+       |     |- features/
+       |- docroot/
+	      |- profiles/
+		     |- standard/
+		     |- my_project (sym link)
 
 !SLIDE subsection small bullets incremental
 # Things that could be better
